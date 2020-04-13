@@ -3,10 +3,10 @@ var app = express();
 
 var port = process.env.PORT || 3000;
 
-app.use('assets', express.static(__dirname + '/public'));
+app.use('/assets', express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
-    res.send('<html><head><link href="assets/styles.css"></link></head><body><h1>All aboard the Hogwarts Express</h1></body></html>')
+    res.send('<html><head><link href="/assets/styles.css" rel="stylesheet"/></head><body><h1>All aboard the Hogwarts Express</h1></body></html>')
 });
 
 app.get('/api', function(req, res){
@@ -18,3 +18,7 @@ app.get('/harry/:id', function(req, res){
 });
 
 app.listen(port, '127.0.0.1');
+var str1 = "HermioneGranger";
+    console.log(str1.substring(0,10));
+    console.log(str1.substr(0,10)); 
+    console.log(str1.slice(10));
