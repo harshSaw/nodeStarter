@@ -18,7 +18,3 @@ app.get('/harry/:id', function(req, res){
 });
 
 app.listen(port, '127.0.0.1');
-var str1 = "HermioneGranger";
-    console.log(str1.substring(0,10));
-    console.log(str1.substr(0,10)); 
-    console.log(str1.slice(10));
